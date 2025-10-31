@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding-top: 70px
+}
+
+.contenedor-encabezado{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px #0000001A;
+    z-index: 1000;
+    padding: 15px 15px;
+}
+
+.contenido-encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.seccion-logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.boton-logo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.imagen-logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+}
+
+.texto-logo{
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: block;
+}
+
+.seccion-derecha{
+    display:flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.seccion-alternar-menu{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.texto-menu{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.alternar-menu{
+    background: none;
+    border: none;
+}
+
+.logo-fcyt{
+    display: flex;
+    height: 40px;
+    width: auto;
+}
