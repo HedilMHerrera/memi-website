@@ -13,7 +13,7 @@
     <header class="contenedor-encabezado">
         <div class="contenido-encabezado">
             <div class="seccion-logo">
-                <a href="#inicio" class="boton-logo">
+                <a href="#inicio" class="boton-logo" onclick="mostrarSeleccion('inicio')">
                     <img src="./img/logoMemi.png" alt="Centro MEMI" class="imagen-logo">
                     <span class="texto-logo">Centro MEMI</span>
                 </a>
@@ -22,7 +22,7 @@
             <div class="seccion-derecha">
                 <div class="seccion-alternar-menu">
                     <span class="texto-menu">Menu</span>
-                    <button class="alternar-menu">
+                    <button class="alternar-menu" onclick="alternarMenuMovil()">
                         <i class="fas fa-bars" id="icono-menu"></i>
                     </button>
                 </div>
@@ -30,4 +30,107 @@
             </div>
         </div>
     </header>
+
+    <nav class="menu-movil" id="menu-movil">
+        <div class="contenedor-item-menu-movil">
+            <button class="item-menu-movil">Inicio</button>
+        </div>
+
+        <div class="contenedor-item-menu-movil">
+            <button class="item-menu-movil">Mision Vision Valores</button>
+        </div>
+
+        <div class="contenedor-item-menu-movil">
+            <button class="item-menu-movil" onclick="alternarSubmenu(event)">
+                <span>Acerca de</span>
+                <i class="fas fa-chevron-down icono-submenu"></i>
+            </button>
+
+            <div class="submenu">
+                <button class="item-submenu">Antecedentes</button>
+                <button class="item-submenu">Datos Históricos</button>
+                <button class="item-submenu">Autoridades</button>
+            </div>
+        </div>
+
+        <div class="contenedor-item-menu-movil">
+            <button class="item-menu-movil">Cursos / Seminarios</button>
+        </div>
+
+        <div class="contenedor-item-menu-movil">
+            <button class="item-menu-movil">Publicaciones</button>
+        </div>
+
+        <div class="contenedor-item-menu-movil">
+            <button class="item-menu-movil">Servicios</button>
+        </div>
+
+        <div class="contenedor-item-menu-movil">
+            <button class="item-menu-movil">ICPC UMSS</button>
+        </div>
+
+        <div class="contenedor-item-menu-movil">
+            <button class="item-menu-movil">Contacto</button>
+        </div>
+    </nav>
+
+    <script>
+        function alternarMenuMovil() {
+            const menuMovil = document.getElementById('menu-movil');
+            const iconoMenu = document.getElementById('icono-menu');
+
+            menuMovil.classList.toggle('activo');
+
+            if (menuMovil.classList.contains('activo')) {
+                iconoMenu.className = 'fas fa-times';
+            } else {
+                iconoMenu.className = 'fas fa-bars';
+            }
+        }
+
+        function alternarSubmenu(evento) {
+            evento.stopPropagation();
+            const boton = evento.currentTarget;
+            const submenu = boton.nextElementSibling;
+            const icono = boton.querySelector('.icono-submenu');
+
+            document.querySelectorAll('.submenu.activo').forEach(submenuAbierto => {
+                if (submenuAbierto !== submenu) {
+                    submenuAbierto.classList.remove('activo');
+                    submenuAbierto.previousElementSibling.querySelector('.icono-submenu').classList.remove('activo');
+                }
+            });
+
+            submenu.classList.toggle('activo');
+            icono.classList.toggle('activo');
+        }
+
+        document.addEventListener('click', function (evento) {
+            const menuMovil = document.getElementById('menu-movil');
+            const alternarMenu = document.querySelector('.alternar-menu');
+
+            if (!alternarMenu.contains(evento.target) && !menuMovil.contains(evento.target)) {
+                menuMovil.classList.remove('activo');
+                document.getElementById('icono-menu').className = 'fas fa-bars';
+
+                document.querySelectorAll('.submenu.activo').forEach(submenu => {
+                    submenu.classList.remove('activo');
+                    submenu.previousElementSibling.querySelector('.icono-submenu').classList.remove('activo');
+                });
+            }
+        });
+
+        function cerrarMenuMovil() {
+            const menuMovil = document.getElementById('menu-movil');
+            const iconoMenu = document.getElementById('icono-menu');
+
+            menuMovil.classList.remove('activo');
+            iconoMenu.className = 'fas fa-bars';
+
+            document.querySelectorAll('.submenu.activo').forEach(submenu => {
+                submenu.classList.remove('activo');
+                submenu.previousElementSibling.querySelector('.icono-submenu').classList.remove('activo');
+            });
+        }
+    </script>
 </body>
