@@ -1,2 +1,2 @@
 # memi-website
-Sitio web informativo del Centro MEMI. Incluye presentación institucional, objetivos, servicios, actividades académicas y medios de contacto, diseñado en HTML y CSS con enfoque visual simple, claro y accesible.
+Informative website for the MEMI Center, including institutional presentation, objectives, services, academic activities, and contact information. Built with HTML, CSS, and JavaScript using a mobile-first design that scales seamlessly to desktop screens.
