@@ -74,7 +74,134 @@
         </div>
     </nav>
 
+    <main class="seccion-pagina activo" id= "inicio">
+        <div class="seccion-carrusel">
+            <div class="contenedor-carrusel">
+                <div class="cuadro-carrusel" id="cuadro-carrusel">
+                    <div class="contenido-carrusel" id="contenido-carrusel"></div>
+                    <div class="indicadores-carrusel" id="indicador"></div>
+                </div>
+
+                <button class="navegacion-carrusel anterior-carrusel" onclick="presentacionAnterior()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="navegacion-carrusel siguiente-carrusel" onclick="siguientePresentacion()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <section class="seccion-publicaciones">
+            <h2 class="titulo-resumen-convocatoria">Convocatorias</h2>
+            <div class="cuadricula-publicaciones">
+                <div class="tarjeta-publicacion">
+                    <div class="encabezado-publicacion">
+                        <div class="icono-pdf">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="info-publicacion">
+                            <h3 class="titulo-publicacion">Convocatoria Auxiliares Ad-Honorem area Informatica para MEMI</h3>
+                            <p class="fecha-publicacion">2011-09-10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <script>
+        const elementosNoticias = [
+            {
+                id: 1,
+                title: "Curso Taller en Logica Matematicas",
+                excerpt: "Inscripciones en secretaría del Centro MEMI, Curso gratuito dirigido a estudiantes de la Facultad de Ciencias y Tecnología que deseen tener un panorama general de la logica matematica",
+                date: "15 Mar 2025",
+                category: "Cursos",
+            },
+            {
+                id: 2,
+                title: "Estudiantes de la UMSS ganan concurso Nodo Bolivia",
+                excerpt: "La Universidad Mayor de San Simón ganó en el concurso latinoamericano Nodo Bolivia, y con ello clasifica al mundial de programación que se realizará en Egipto",
+                date: "5 Mar 2025",
+                category: "Logros",
+            },
+            {
+                id: 3,
+                title: "Invitacion a Conferencia Gratuita",
+                excerpt: "Oportunidades y becas para estudios e investigacion en ciencias de la computacion en mexico",
+                date: "10 Mar 2025",
+                category: "Conferencias",
+            }
+        ];
+
+        let presentacionActual = 0;
+
+        function iniciarCarrusel() {
+            actualizarContenidoCarrusel();
+            crearIndicadores();
+            iniciarPresentacionAutomatica();
+        }
+
+        function actualizarContenidoCarrusel() {
+            const contenido = document.getElementById('contenido-carrusel');
+            const cuadroCarrusel = document.getElementById('cuadro-carrusel');
+            const elemento = elementosNoticias[presentacionActual];
+
+            cuadroCarrusel.style.backgroundImage = `url('${elemento.backgroundImage}')`;
+
+            contenido.innerHTML = `
+                <div>
+                    <span class="categoria-noticia">${elemento.category}</span>
+                </div>
+                <h3 class="titulo-noticia">${elemento.title}</h3>
+                <p class="extracto-noticia">${elemento.excerpt}</p>
+                <div class="meta-noticia">
+                    <div class="item-meta-noticia">
+                        <i class="fas fa-calendar"></i>
+                        <span>${elemento.date}</span>
+                    </div>
+                    
+                </div>
+            `;
+
+            actualizarIndicadores();
+        }
+
+        function crearIndicadores() {
+            const contenedorIndicadores = document.getElementById('indicador');
+            contenedorIndicadores.innerHTML = '';
+
+            elementosNoticias.forEach((_, indice) => {
+                const indicador = document.createElement('button');
+                indicador.className = 'indicador';
+                indicador.onclick = () => irAPresentacion(indice);
+                contenedorIndicadores.appendChild(indicador);
+            });
+        }
+
+        function actualizarIndicadores() {
+            const indicadores = document.querySelectorAll('.indicador');
+            indicadores.forEach((indicador, indice) => {
+                indicador.classList.toggle('activo', indice === presentacionActual);
+            });
+        }
+
+        function siguientePresentacion() {
+            presentacionActual = (presentacionActual + 1) % elementosNoticias.length;
+            actualizarContenidoCarrusel();
+        }
+
+        function presentacionAnterior() {
+            presentacionActual = presentacionActual === 0 ? elementosNoticias.length - 1 : presentacionActual - 1;
+            actualizarContenidoCarrusel();
+        }
+
+        function irAPresentacion(indice) {
+            presentacionActual = indice;
+            actualizarContenidoCarrusel();
+        }
+
         function alternarMenuMovil() {
             const menuMovil = document.getElementById('menu-movil');
             const iconoMenu = document.getElementById('icono-menu');
@@ -132,5 +259,25 @@
                 submenu.previousElementSibling.querySelector('.icono-submenu').classList.remove('activo');
             });
         }
+
+        function mostrarSeccion(idSeccion) {
+            document.querySelectorAll('.seccion-pagina').forEach(seccion => {
+                seccion.classList.remove('activo');
+            });
+
+            const seccionSeleccionada = document.getElementById(idSeccion);
+            if (seccionSeleccionada) {
+                seccionSeleccionada.classList.add('activo');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            cerrarMenuMovil();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            iniciarCarrusel();
+        });
     </script>
 </body>
+
+</html>
