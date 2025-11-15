@@ -167,3 +167,140 @@ body{
     transition: all 0.3s;
     border-left: 3px solid transparent;
 }
+
+.seccion-carrusel {
+    background-color: #f8fffe;
+    padding: 15px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor-carrusel{
+    position: relative;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.cuadro-carrusel{
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px #0000001A;
+    overflow: hidden;
+    position: relative;
+}
+
+.cuadro-carrusel::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #bdfaf6, #dff4f3);
+    opacity: 40%;
+    z-index: 1;
+}
+
+.contenido-carrusel{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 15px;
+}
+
+.categoria-noticia{
+    display: inline-block;
+    background-color: #4fbab0;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.titulo-noticia{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.extracto-noticia{
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.meta-noticia{
+    display: flex;
+    gap:16px;
+    font-size: 12px;
+    color: #6b7280;
+    flex-wrap: wrap;
+}
+
+.item-meta-noticia{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.navegacion-carrusel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 3;
+    font-size: 18px;
+    color: rgba(3, 181, 166, 0.982);
+}
+
+.anterior-carrusel {
+    left: 5px;
+}
+
+.siguiente-carrusel {
+    right: 5px;
+}
+
+.indicadores-carrusel {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 3;
+}
+
+.indicador {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4fbab0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-color: #4fbab0;
+}
+
+.indicador.activo {
+    background-color: #297e78;
+    border-color: #297e78;
+}
