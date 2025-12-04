@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header class="contenedor-encabezado">
         <div class="contenido-encabezado">
@@ -74,7 +75,7 @@
         </div>
     </nav>
 
-    <main class="seccion-pagina activo" id= "inicio">
+    <main class="seccion-pagina activo" id="inicio">
         <div class="seccion-carrusel">
             <div class="contenedor-carrusel">
                 <div class="cuadro-carrusel" id="cuadro-carrusel">
@@ -100,13 +101,139 @@
                             <i class="fas fa-file-pdf"></i>
                         </div>
                         <div class="info-publicacion">
-                            <h3 class="titulo-publicacion">Convocatoria Auxiliares Ad-Honorem area Informatica para MEMI</h3>
+                            <h3 class="titulo-publicacion">Convocatoria Auxiliares Ad-Honorem area Informatica para MEMI
+                            </h3>
                             <p class="fecha-publicacion">2011-09-10</p>
                         </div>
                     </div>
+                    <div class="botones-publicacion">
+                        <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                            target="_blank" class="boton-ver">
+                            <i class="fas fa-eye"></i>
+                            Ver
+                        </a>
+                        <a class="boton-descargar">
+                            <i class="fas fa-download"></i>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-publicacion">
+                    <div class="encabezado-publicacion">
+                        <div class="icono-pdf">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="info-publicacion">
+                            <h3 class="titulo-publicacion">CONVOCATORIAS PARA AUXILIARES Y BECARIOS</h3>
+                            <p class="fecha-publicacion">2011-03-01</p>
+                        </div>
+                    </div>
+                    <p class="descripcion-publicacion">Convocatoria a concurso de méritos y pruebas de conocimiento para
+                        optar a becas de titulación.</p>
+                    <div class="botones-publicacion">
+                        <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                            target="_blank" class="boton-ver">
+                            <i class="fas fa-eye"></i>
+                            Ver
+                        </a>
+                        <a class="boton-descargar">
+                            <i class="fas fa-download"></i>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-publicacion">
+                    <div class="encabezado-publicacion">
+                        <div class="icono-pdf">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="info-publicacion">
+                            <h3 class="titulo-publicacion">Hackathon Haskell</h3>
+                            <p class="fecha-publicacion">Evento especial</p>
+                        </div>
+                    </div>
+                    <p class="descripcion-publicacion">Evento de programación competitiva enfocado en el lenguaje
+                        funcional Haskell.</p>
+                    <div class="botones-publicacion">
+                        <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                            target="_blank" class="boton-ver">
+                            <i class="fas fa-eye"></i>
+                            Ver
+                        </a>
+                        <a class="boton-descargar">
+                            <i class="fas fa-download"></i>
+                            Descargar
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <div style="text-align: center; margin-top: 32px;">
+                <button class="boton-ver-mas-cursos" onclick="mostrarSeccion('publicaciones')">
+                    <span>Ver más publicaciones</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
         </section>
+
+        <section class="seccion-resumen-cursos">
+            <div class="contenedor-resumen-cursos">
+                <h2 class="titulo-resumen-cursos">Cursos</h2>
+
+                <div class="lista-cursos">
+                    <div class="item-curso">
+                        <strong>Curso de Programación Competitiva</strong> - Talleres intensivos para desarrollar
+                        habilidades en algoritmos y estructuras de datos.
+                    </div>
+                    <div class="item-curso">
+                        <strong>Inteligencia Artificial</strong> - Seminarios sobre machine learning, deep learning y
+                        aplicaciones prácticas
+                    </div>
+                    <div class="item-curso">
+                        <strong>Ciencia de Datos</strong> - Cursos de análisis de datos, visualización y herramientas
+                        modernas
+                    </div>
+                    <div class="item-curso">
+                        <strong>Matemática Aplicada</strong> - Formación continua para docentes de nivel medio y
+                        universitario
+                    </div>
+                </div>
+
+                <button class="boton-ver-mas-cursos" onclick="mostrarSeccion('cursos')">
+                    <span>Ver todos los cursos</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <footer class="pie-pagina">
+            <div class="cuadricula-pie-pagina">
+                <div>
+                    <h3>Centro MEMI</h3>
+                </div>
+            </div>
+
+            <div class="enlaces-redes-sociales">
+                <a href="mailto:info@memi.fcyt.umss.edu.bo" class="boton-redes-sociales">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a href="https://www.facebook.com/memiumss/?locale=es_LA" target="_blank" class="boton-redes-sociales">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+                <a href="http://www.fcyt.umss.edu.bo/" target="_blank" class="boton-redes-sociales">
+                    <i class="fas fa-globe"></i>
+                    Web FCyT
+                </a>
+
+                <p class="derechos-autor">
+                    © 2025 Centro MEMI - FCyT UMSS. Todos los derechos reservados.
+                </p>
+            </div>
+        </footer>
 
     </main>
 
