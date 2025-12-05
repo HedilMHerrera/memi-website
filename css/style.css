@@ -534,3 +534,81 @@ body{
     margin-top: 16px;
     text-align: center;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.seccion-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    background-color: #f8fffe;
+}
+
+.seccion-contenido h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #003874;
+    margin-bottom: 24px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.seccion-contenido h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #003874;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.seccion-contenido p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    margin-bottom: 14px;
+}
+
+.seccion-contenido ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.seccion-contenido ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    padding-left: 28px;
+    position: relative;
+}
+
+.seccion-contenido ul li:before {
+    content: "•";
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 8px;
+}
+
+.cuadricula-valores {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.tarjeta-valor {
+    background: #f1fafd;
+    padding: 18px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-valor h4 {
+    font-size: 1.1rem;
+    color: #4fbab0;
+    margin-bottom: 6px;
+}
