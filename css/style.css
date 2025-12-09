@@ -612,3 +612,82 @@ html {
     color: #4fbab0;
     margin-bottom: 6px;
 }
+
+.marcador-subida {
+    border-radius: 12px;
+    text-align: center;
+    margin: 24px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.marcador-subida img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.marcador-subida i {
+    font-size: 3rem;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.marcador-subida p {
+    font-size: 0.95rem;
+}
+
+.cuadricula-autoridades {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.tarjeta-autoridad {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px #0000001A;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding-bottom: 20px;
+}
+
+.imagen-autoridad {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    margin: 20px auto 12px;
+    overflow: hidden;
+}
+
+.imagen-autoridad img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-autoridad {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.info-autoridad h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.info-autoridad p {
+    font-size: 0.95rem;
+    color: #003875;
+    font-weight: 500;
+}
