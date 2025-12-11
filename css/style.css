@@ -691,3 +691,49 @@ html {
     color: #003875;
     font-weight: 500;
 }
+
+.marcador-subida {
+    border-radius: 12px;
+    text-align: center;
+    margin: 24px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.marcador-subida img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.marcador-subida i {
+    font-size: 3rem;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.marcador-subida p {
+    font-size: 0.95rem;
+}
+
+.tarjeta-servicio {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px #0000001A;
+    transition: all 0.3s;
+}
+
+.tarjeta-servicio h4 {
+    font-size: 1.2rem;
+    color: #003875;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.tarjeta-servicio p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
