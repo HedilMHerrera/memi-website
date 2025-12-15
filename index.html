@@ -20,6 +20,29 @@
                 </a>
             </div>
 
+            <nav class="menu-escritorio">
+                <button class="item-menu-escritorio" onclick="mostrarSeccion('inicio')">Inicio</button>
+                <button class="item-menu-escritorio" onclick="mostrarSeccion('mision-vision')">Fundamentos<br></button>
+
+                <div class="item-menu-escritorio">
+                    Acerca de <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 4px;"></i>
+                    <div class="submenu-escritorio">
+                        <button class="item-submenu-escritorio"
+                            onclick="mostrarSeccion('antecedentes')">Antecedentes</button>
+                        <button class="item-submenu-escritorio" onclick="mostrarSeccion('datos-historicos')">Datos
+                            históricos</button>
+                        <button class="item-submenu-escritorio"
+                            onclick="mostrarSeccion('autoridades')">Autoridades</button>
+                    </div>
+                </div>
+
+                <button class="item-menu-escritorio" onclick="mostrarSeccion('cursos')">Cursos</button>
+                <button class="item-menu-escritorio" onclick="mostrarSeccion('publicaciones')">Publicaciones</button>
+                <button class="item-menu-escritorio" onclick="mostrarSeccion('servicios')">Servicios</button>
+                <button class="item-menu-escritorio" onclick="mostrarSeccion('icpc')">ICPC UMSS</button>
+                <button class="item-menu-escritorio" onclick="mostrarSeccion('contacto')">Contacto</button>
+            </nav>
+
             <div class="seccion-derecha">
                 <div class="seccion-alternar-menu">
                     <span class="texto-menu">Menu</span>
@@ -27,7 +50,7 @@
                         <i class="fas fa-bars" id="icono-menu"></i>
                     </button>
                 </div>
-                <!--<img src="./img/logoFcyt.png" alt="FCyT UMMS" class="logo-fcyt">-->
+                <img src="./img/logoFcyt.png" alt="FCyT UMMS" class="logo-fcyt">
             </div>
         </div>
     </header>
@@ -538,6 +561,66 @@
             <h4><i class="fas fa-building"></i> Alquiler de ambientes</h4>
             <p>Disponemos de dos ambientes cómodos para defensas públicas, cursos, seminarios, talleres, de carácter
                 privado, con todo el equipamiento para el éxito de sus eventos.</p>
+        </div>
+    </section>
+
+    <section id="icpc" class="seccion-contenido seccion-pagina">
+        <h2>ICPC UMSS</h2>
+        <p>El Centro MEMI acoge en su infraestructura al ICPC UMSS</p>
+
+        <h3>Afiches</h3>
+        <div class="marcador-subida">
+            <img src="./img/icpcWorld.png" alt="Afiche evento mundial de programación">
+            <p>Competencia Mundial de Programación Competitiva</p>
+        </div>
+        <div class="marcador-subida">
+            <img src="./img/competenciaLatinoamericana.png" alt="Afiche ICPC latinoamericana">
+            <p>Competencia latinoamericana de programacion</p>
+        </div>
+
+        <h3>Equipos de programacion</h3>
+        <div class="marcador-subida">
+            <img src="./img/equipoICPC.png" alt="equipo ICPC">
+            <p>Participacion de la UMSS en el Evento Mundial de Programacion</p>
+        </div>
+
+        <h3>Acerca de ICPC</h3>
+        <div class="contenedor-video">
+            <iframe src="https://www.youtube.com/embed/_b-z0LOhGYg" title="Video Destacado"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section id="contacto" class="seccion-contenido seccion-pagina">
+        <h2>Contacto</h2>
+
+        <div class="cuadricula-contacto">
+            <div class="tarjeta-contacto">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Dirección</h4>
+                <p>Campus Central UMSS<br>Edificio MEMI</p>
+            </div>
+
+            <div class="tarjeta-contacto">
+                <i class="fas fa-phone"></i>
+                <h4>Teléfono</h4>
+                <p>(+591) 4 4666037<br>IP 36540</p>
+            </div>
+
+            <div class="tarjeta-contacto">
+                <i class="fas fa-envelope"></i>
+                <h4>Correo Electrónico</h4>
+                <p>memi@fcyt.umss.edu.bo</p>
+            </div>
+        </div>
+
+        <div class="contenedor-mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4!2d-66.15!3d-17.39!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzI0LjAiUyA2NsKwMDknMDAuMCJX!5e0!3m2!1ses!2sbo!4v1234567890"
+                style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
     </section>
 
