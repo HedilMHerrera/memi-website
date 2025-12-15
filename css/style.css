@@ -1,17 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
     color: #1a1a1a;
     padding-top: 70px
 }
 
-.contenedor-encabezado{
+.contenedor-encabezado {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@ body{
     padding: 15px 15px;
 }
 
-.contenido-encabezado{
+.contenido-encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,26 +31,26 @@ body{
     margin: 0 auto;
 }
 
-.seccion-logo{
+.seccion-logo {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.boton-logo{
+.boton-logo {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.imagen-logo{
+.imagen-logo {
     height: 40px;
     width: 40px;
     border-radius: 6px;
 }
 
-.texto-logo{
+.texto-logo {
     font-size: 16px;
     font-weight: 700;
     color: #1a1a1a;
@@ -114,25 +114,25 @@ body{
     border-left: 3px solid transparent;
 }
 
-.seccion-derecha{
-    display:flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.seccion-alternar-menu{
+.seccion-derecha {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.texto-menu{
+.seccion-alternar-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.texto-menu {
     font-size: 14px;
     font-weight: 600;
     color: #1a1a1a;
 }
 
-.alternar-menu{
+.alternar-menu {
     background: none;
     border: none;
     font-size: 20px;
@@ -144,16 +144,16 @@ body{
     width: 40px;
 }
 
-.logo-fcyt{
+.logo-fcyt {
     display: flex;
     height: 40px;
     width: auto;
 }
 
-.menu-movil{
+.menu-movil {
     position: fixed;
     top: 70px;
-    left:0;
+    left: 0;
     right: 0;
     background-color: #f1fafd;
     border-bottom: 1px solid #e5e7eb;
@@ -167,21 +167,21 @@ body{
     overflow-y: auto;
 }
 
-.menu-movil.activo{
+.menu-movil.activo {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
 }
 
-.contenedor-item-menu-movil{
+.contenedor-item-menu-movil {
     border-bottom: 1px solid #e5e7eb;
 }
 
-.contenedor-item-menu-movil:last-child{
+.contenedor-item-menu-movil:last-child {
     border-bottom: none;
 }
 
-.item-menu-movil{
+.item-menu-movil {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -193,32 +193,32 @@ body{
     font-size: 15px;
     font-weight: 600;
     color: #007aae;
-    cursor:pointer;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.icono-submenu{
+.icono-submenu {
     transition: transform 0.3s ease;
     font-size: 14px;
     color: #6b7280;
 }
 
-.icono-submenu.activo{
+.icono-submenu.activo {
     transform: rotate(180deg);
 }
 
-.submenu{
+.submenu {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
     background-color: #0000001A;
 }
 
-.submenu.activo{
+.submenu.activo {
     max-height: 500px;
 }
 
-.item-submenu{
+.item-submenu {
     display: block;
     width: 100%;
     padding: 12px 20px 12px 40px;
@@ -239,13 +239,13 @@ body{
     margin: 0 auto;
 }
 
-.contenedor-carrusel{
+.contenedor-carrusel {
     position: relative;
     max-width: 1024px;
     margin: 0 auto;
 }
 
-.cuadro-carrusel{
+.cuadro-carrusel {
     background-size: cover;
     background-position: center;
     border-radius: 12px;
@@ -254,7 +254,7 @@ body{
     position: relative;
 }
 
-.cuadro-carrusel::before{
+.cuadro-carrusel::before {
     content: '';
     position: absolute;
     top: 0;
@@ -266,7 +266,7 @@ body{
     z-index: 1;
 }
 
-.contenido-carrusel{
+.contenido-carrusel {
     position: relative;
     z-index: 2;
     height: 100%;
@@ -277,7 +277,7 @@ body{
     left: 15px;
 }
 
-.categoria-noticia{
+.categoria-noticia {
     display: inline-block;
     background-color: #4fbab0;
     color: white;
@@ -288,7 +288,7 @@ body{
     margin-bottom: 12px;
 }
 
-.titulo-noticia{
+.titulo-noticia {
     font-size: 1.2rem;
     font-weight: bold;
     color: #1a1a1a;
@@ -296,28 +296,28 @@ body{
     line-height: 1.2;
 }
 
-.extracto-noticia{
+.extracto-noticia {
     font-size: 0.95rem;
     color: #1a1a1a;
     margin-bottom: 16px;
     line-height: 1.3;
 }
 
-.meta-noticia{
+.meta-noticia {
     display: flex;
-    gap:16px;
+    gap: 16px;
     font-size: 12px;
     color: #6b7280;
     flex-wrap: wrap;
 }
 
-.item-meta-noticia{
+.item-meta-noticia {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.navegacion-carrusel{
+.navegacion-carrusel {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -570,7 +570,7 @@ body{
 }
 
 .enlaces-redes-sociales {
-    
+
     padding-top: 5px;
     margin-top: 20px;
     text-align: start;
@@ -891,4 +891,387 @@ html {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px #0000001A;
+}
+
+@media (min-width: 480px) {
+    .imagen-logo {
+        height: 45px;
+        width: 50px;
+    }
+
+    .texto-logo {
+        font-size: 17px;
+    }
+
+    .cuadro-carrusel {
+        height: 350px;
+    }
+
+    .titulo-noticia {
+        font-size: 1.4rem;
+    }
+
+    .extracto-noticia {
+        font-size: 1rem;
+    }
+
+    .titulo-publicacion {
+        font-size: 1.05rem;
+    }
+
+    .icono-pdf {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .cuadricula-valores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 640px) {
+    .contenedor-encabezado {
+        padding: 10px 20px;
+    }
+
+    .cuadricula-publicaciones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lista-cursos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cuadricula-autoridades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cuadricula-contacto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 75px;
+    }
+
+    .contenedor-encabezado {
+        padding: 12px 20px;
+    }
+
+    .imagen-logo {
+        height: 50px;
+        width: 55px;
+    }
+
+    .texto-logo {
+        font-size: 18px;
+    }
+
+    .cuadro-carrusel {
+        height: 400px;
+    }
+
+    .contenido-carrusel {
+        padding: 32px;
+        left: 10px;
+    }
+
+    .categoria-noticia {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .titulo-noticia {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .extracto-noticia {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    .meta-noticia {
+        font-size: 14px;
+        gap: 24px;
+    }
+
+    .navegacion-carrusel {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .indicador {
+        width: 12px;
+        height: 12px;
+    }
+
+    .seccion-publicaciones {
+        padding: 30px 20px;
+    }
+
+    .titulo-resumen-convocatoria {
+        font-size: 2rem;
+    }
+
+    .cuadricula-publicaciones {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .tarjeta-publicacion {
+        padding: 24px;
+        gap: 16px;
+    }
+
+    .icono-pdf {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .titulo-publicacion {
+        font-size: 1.1rem;
+    }
+
+    .fecha-publicacion {
+        font-size: 0.9rem;
+    }
+
+    .descripcion-publicacion {
+        font-size: 0.95rem;
+    }
+
+    .boton-descargar,
+    .boton-ver,
+    .boton-ver-mas {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .seccion-resumen-cursos {
+        padding: 30px 20px;
+    }
+
+    .titulo-resumen-cursos {
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+
+    .texto-resumen-cursos {
+        font-size: 1.1rem;
+        margin-bottom: 32px;
+    }
+
+    .lista-cursos {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .item-curso {
+        padding: 16px 20px;
+        font-size: 1rem;
+    }
+
+    .boton-ver-mas-cursos {
+        padding: 14px 32px;
+        font-size: 1.1rem;
+        gap: 10px;
+    }
+
+    .pie-pagina {
+        padding: 25px 20px;
+    }
+
+    .cuadricula-pie-pagina {
+        gap: 32px;
+    }
+
+    .pie-pagina h3 {
+        font-size: 1.2rem;
+    }
+
+    .pie-pagina p {
+        font-size: 1rem;
+    }
+
+    .enlaces-redes-sociales {
+        padding-top: 32px;
+        margin-top: 32px;
+    }
+
+    .boton-redes-sociales {
+        padding: 8px 16px;
+        margin: 0 8px 16px 8px;
+        font-size: 1rem;
+    }
+
+    .derechos-autor {
+        font-size: 14px;
+    }
+
+    .seccion-contenido {
+        padding: 30px 20px;
+    }
+
+    .seccion-contenido h2 {
+        font-size: 2.3rem;
+        margin-bottom: 32px;
+    }
+
+    .seccion-contenido h3 {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+    }
+
+    .seccion-contenido p {
+        font-size: 1.1rem;
+    }
+
+    .seccion-contenido ul li {
+        font-size: 1.1rem;
+        padding-left: 32px;
+        margin-bottom: 12px;
+    }
+
+    .seccion-contenido ul li:before {
+        font-size: 1.5rem;
+    }
+
+    .cuadricula-valores {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    .tarjeta-valor {
+        padding: 24px;
+    }
+
+    .tarjeta-valor h4 {
+        font-size: 1.2rem;
+    }
+
+    .cuadricula-autoridades {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .imagen-autoridad {
+        width: 150px;
+        height: 150px;
+        font-size: 3rem;
+        margin: 24px auto 16px;
+    }
+
+    .info-autoridad h4 {
+        font-size: 1.3rem;
+    }
+
+    .info-autoridad p {
+        font-size: 1rem;
+    }
+
+    .tarjeta-servicio {
+        padding: 32px;
+        margin-bottom: 24px;
+    }
+
+    .tarjeta-servicio h4 {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+    }
+
+    .tarjeta-servicio p {
+        font-size: 1rem;
+    }
+
+    .cuadricula-contacto {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .tarjeta-contacto {
+        padding: 32px;
+    }
+
+    .tarjeta-contacto i {
+        font-size: 3rem;
+        margin-bottom: 16px;
+    }
+
+    .tarjeta-contacto h4 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .tarjeta-contacto p {
+        font-size: 1rem;
+    }
+
+    .contenedor-mapa {
+        margin-top: 48px;
+    }
+
+    .marcador-subida {
+        margin: 32px 0;
+    }
+
+    .marcador-subida img {
+        margin-bottom: 16px;
+    }
+
+    .marcador-subida i {
+        font-size: 4rem;
+        margin-bottom: 16px;
+    }
+
+    .divisor-seccion {
+        margin: 48px 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .menu-escritorio {
+        display: flex;
+    }
+
+    .item-menu-escritorio {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+
+    .seccion-alternar-menu {
+        display: none;
+    }
+
+    .logo-fcyt {
+        display: block;
+    }
+
+    .seccion-carrusel {
+        padding: 20px 10px;
+    }
+
+    .seccion-publicaciones {
+        padding: 40px 20px;
+    }
+
+    .seccion-resumen-cursos {
+        padding: 40px 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .item-menu-escritorio {
+        font-size: 16px;
+    }
 }
