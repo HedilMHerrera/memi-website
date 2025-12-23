@@ -145,7 +145,7 @@ body {
 }
 
 .logo-fcyt {
-    display: flex;
+    display: none;
     height: 40px;
     width: auto;
 }
@@ -248,9 +248,6 @@ body {
 .cuadro-carrusel {
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px #0000001A;
-    overflow: hidden;
     position: relative;
 }
 
@@ -261,9 +258,9 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(to top, #bdfaf6, #dff4f3);
-    opacity: 40%;
-    z-index: 1;
+    background-image: linear-gradient(to bottom right, #2bdbfa, #ffffff);
+    opacity: 20%;
+    border-radius: 15px;
 }
 
 .contenido-carrusel {
@@ -279,7 +276,7 @@ body {
 
 .categoria-noticia {
     display: inline-block;
-    background-color: #4fbab0;
+    background-color: #06B6D4;
     color: white;
     padding: 4px 10px;
     border-radius: 20px;
@@ -332,7 +329,7 @@ body {
     transition: all 0.3s;
     z-index: 3;
     font-size: 18px;
-    color: rgba(3, 181, 166, 0.982);
+    color: #06B6D4;
 }
 
 .anterior-carrusel {
@@ -351,17 +348,16 @@ body {
     display: flex;
     justify-content: center;
     gap: 6px;
-    z-index: 3;
 }
 
 .indicador {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #4fbab0;
+    background-color: #06B6D4;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-color: #4fbab0;
+    border-color: #06B6D4;
 }
 
 .indicador.activo {
@@ -412,7 +408,7 @@ body {
 .icono-pdf {
     width: 50px;
     height: 50px;
-    background: #4fbab0;
+    background: #06B6D4;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -472,12 +468,14 @@ body {
 }
 
 .boton-descargar {
-    background: #4fbab0;
-    color: white;
+    background: #ffffff;
+    color: #06B6D4;
+    border-bottom: #06B6D4;
+    border: 0.3px solid #06B6D4;
 }
 
 .boton-ver {
-    background: #4fbab0;
+    background: #06B6D4;
     color: white;
 }
 
@@ -531,9 +529,24 @@ body {
     line-height: 1.5;
 }
 
+.hero-organigrama {
+    text-align: center;
+    padding: 28px 16px 12px;
+    background-color: transparent;
+    margin-bottom: 12px;
+}
+
+.subtitulo-organigrama {
+    color: #6b7280;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 0.98rem;
+    line-height: 1.4;
+}
+
 .boton-ver-mas-cursos {
     padding: 12px 28px;
-    background: #4fbab0;
+    background: #06B6D4;
     color: white;
     border: none;
     border-radius: 8px;
@@ -681,7 +694,7 @@ html {
 
 .tarjeta-valor h4 {
     font-size: 1.1rem;
-    color: #4fbab0;
+    color: #06B6D4;
     margin-bottom: 6px;
 }
 
@@ -707,6 +720,113 @@ html {
 }
 
 .marcador-subida p {
+    font-size: 0.95rem;
+}
+
+.infraestructura-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(3, 15, 22, 0.06);
+    border: 1px solid rgba(3, 15, 22, 0.03);
+    max-width: 520px;
+    margin: 18px auto 36px;
+    text-align: left;
+}
+
+.infra-titulo {
+    font-size: 1.4rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.infra-descripcion {
+    color: #6b7280;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.infra-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    display: grid;
+    gap: 12px;
+}
+
+.infra-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.infra-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.infra-icon--purple{
+     background: #0ea5a4;
+}
+
+.infra-icon--green {
+    background: #0ea5a4;
+}
+
+.infra-icon--teal {
+    background: #0ea5a4;
+}
+
+.infra-text h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: #0f172a;
+}
+
+.infra-text p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.92rem;
+}
+
+.infra-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #0ea5a4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.marcador-subida.organigrama-card {
+    background: #ffffff;
+    padding: 36px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(3, 15, 22, 0.06);
+    border: 1px solid rgba(3, 15, 22, 0.03);
+    max-width: 1180px;
+    margin: 28px auto;
+}
+
+.marcador-subida.organigrama-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.marcador-subida.organigrama-card p {
+    margin-top: 12px;
+    color: #6b7280;
     font-size: 0.95rem;
 }
 
@@ -870,7 +990,7 @@ html {
 
 .tarjeta-contacto i {
     font-size: 2.5rem;
-    color: #4fbab0;
+    color: #06B6D4;
     margin-bottom: 12px;
 }
 
@@ -1273,5 +1393,19 @@ html {
 @media (min-width: 1200px) {
     .item-menu-escritorio {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .marcador-subida.organigrama-card {
+        padding: 16px;
+        margin: 18px 12px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .infraestructura-card {
+        max-width: calc(100% - 32px); padding: 16px; 
     }
 }
